@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Tasks</title>
+</head>
+<body>
+    <h1>All Tasks</h1>
+    <table border="1">
+        <tr>
+            <th>Task ID</th>
+            <th>Schedule</th>
+            <th>Filename</th>
+            <th>Filepath</th>
+            <th>Server Key</th>
+            <th>Retries</th>
+            <th>Retry Delay</th>
+            <th>Timeout</th>
+            <th>Dependency Server Key</th>
+            <th>Command</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.task_id }}</td>
+            <td>{{ task.schedule }}</td>
+            <td>{{ task.filename }}</td>
+            <td>{{ task.filepath }}</td>
+            <td>{{ task.server_key }}</td>
+            <td>{{ task.retries }}</td>
+            <td>{{ task.retry_delay }}</td>
+            <td>{{ task.timeout }}</td>
+            <td>{{ task.dependency_server_key }}</td>
+            <td>{{ task.command }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

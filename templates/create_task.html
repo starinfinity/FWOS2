@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+</head>
+<body>
+    <h1>Create a New Task</h1>
+    <form action="/add_task" method="POST">
+        <label for="task_id">Task ID:</label>
+        <input type="text" id="task_id" name="task_id" required><br><br>
+
+        <label for="schedule">Schedule:</label>
+        <input type="text" id="schedule" name="schedule" required><br><br>
+
+        <label for="filename">Filename:</label>
+        <input type="text" id="filename" name="filename" required><br><br>
+
+        <label for="filepath">Filepath:</label>
+        <input type="text" id="filepath" name="filepath" required><br><br>
+
+        <label for="server_key">Server Key:</label>
+        <input type="text" id="server_key" name="server_key" required><br><br>
+
+        <label for="retries">Retries:</label>
+        <input type="number" id="retries" name="retries" value="3"><br><br>
+
+        <label for="retry_delay">Retry Delay (seconds):</label>
+        <input type="number" id="retry_delay" name="retry_delay" value="60"><br><br>
+
+        <label for="timeout">Timeout (optional):</label>
+        <input type="number" id="timeout" name="timeout"><br><br>
+
+        <label for="dependency_server_key">Dependency Server Key:</label>
+        <input type="text" id="dependency_server_key" name="dependency_server_key"><br><br>
+
+        <label for="command">Command:</label>
+        <input type="text" id="command" name="command"><br><br>
+
+        <input type="submit" value="Create Task">
+    </form>
+</body>
+</html>
